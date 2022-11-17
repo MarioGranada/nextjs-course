@@ -10,7 +10,7 @@ const handler  = async (req, res) => {
 
     const data = req.body; 
 
-    const client =await MongoClient.connect('mongodb+srv://mgranada:QBQLSepdg2jPYKXL@cluster0.vfrndqf.mongodb.net/meetupsDB?retryWrites=true&w=majority');
+    const client = await MongoClient.connect('mongodb+srv://user:psswd@cluster0.vfrndqf.mongodb.net/meetupsDB?retryWrites=true&w=majority');
 
     const db = client.db();
 
@@ -19,7 +19,7 @@ const handler  = async (req, res) => {
     const result = await meetupsCollection.insertOne(data);
 
     client.close();
-    
+
     console.log('in here oe result', result);
     res.status(201).json({message: "Meet up created successfully", result});
 }
