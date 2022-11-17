@@ -9,7 +9,7 @@ function MeetupItem(props) {
     router.push('/'+props.id)
   }
 
-  console.log('in here oe props', props);
+  console.table(props);
 
   return (
     <li className={classes.item}>
