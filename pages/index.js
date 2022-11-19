@@ -1,6 +1,8 @@
+import Head from 'next/head'
 import { MongoClient } from 'mongodb';
 import MeetupList from '../components/meetups/MeetupList';
 
+// Commented code left here purposely
 // const DUMMY_MEETUPS = [
 //     {
 //         id: 'm1',
@@ -19,7 +21,12 @@ import MeetupList from '../components/meetups/MeetupList';
 // ];
 
 function HomePage(props) {
-    return <MeetupList meetups={props.meetups} />;
+    return <>
+    <Head>
+        <title>React Meetups Next JS course</title>
+        <meta name="description" content="Browse a huge list of highly active React Meetups!" />
+    </Head>
+    <MeetupList meetups={props.meetups} /></>;
 }
 
 export async function getStaticProps() {
