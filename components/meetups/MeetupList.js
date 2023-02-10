@@ -11,7 +11,6 @@ function MeetupList(props) {
           image={meetup.image}
           title={meetup.title}
           address={meetup.address}
-          key={meetup.id}
         />
       ))}
     </ul>
