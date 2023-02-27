@@ -1,5 +1,5 @@
 const BlogsPage = ({testData}) => {
-    return <>in here blogs index page {testData}</>
+    return <>in here blogs index page {testData} <br/> {process.env.NEXT_PUBLIC_TEST_ENV} </>
 }
 
 export function  getStaticProps() {

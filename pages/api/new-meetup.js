@@ -20,7 +20,6 @@ const handler  = async (req, res) => {
 
     client.close();
 
-    console.log('in here oe result', result);
     res.status(201).json({message: "Meet up created successfully", result});
 }
 

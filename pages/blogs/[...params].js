@@ -20,7 +20,6 @@ const BlogsPage = ({test}) => {
     //     ]
     // }
     const {params = [], ...rest} = router.query;
-    console.log('in here oe params', {params, rest});
 
 return <>
 in here oe blogs - catched all routes page
